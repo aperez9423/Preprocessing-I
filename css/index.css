@@ -139,18 +139,32 @@ body {
 header {
   border-bottom: 0.2rem solid black;
 }
-header nav {
+nav {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-header nav a {
+nav a {
   border: 0.2rem solid black;
   border-radius: 1.5rem;
+  text-decoration: none;
+  color: black;
   margin: 1rem;
   padding: 1rem;
   font-size: 3rem;
   font-family: 'PT Sans';
   background-color: lightgray;
+  text-align: center;
+}
+@media (max-width: 550px) {
+  nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  nav {
+    justify-content: space-evenly;
+  }
 }
 .introduction {
   border: 0.2rem solid black;
@@ -185,13 +199,25 @@ header nav a {
   background-color: whitesmoke;
   padding: 1.5rem;
   font-family: 'PT Sans';
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-style: bold;
 }
 .work-and-experience {
   display: flex;
   flex-direction: row;
   font-family: 'PT Sans';
+}
+@media (max-width: 550px) {
+  .work-and-experience {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+  .work-and-experience {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .whyhire {
   font-size: 2rem;
@@ -228,6 +254,32 @@ header nav a {
   text-align: center;
   vertical-align: middle;
 }
+.education h2 {
+  font-size: 3rem;
+  font-style: bold;
+  font-family: 'PT Sans', sans-serif;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: purple;
+  font-family: 'PT Sans';
+  margin-top: 2rem;
+}
+.education h3 {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.education ul {
+  list-style-type: disc;
+  margin: 2rem;
+}
+.education ul li {
+  font-size: 1.6rem;
+}
+.education h4 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
 .skills-and-awards {
   width: 30vw;
   margin: 2rem;
@@ -235,17 +287,25 @@ header nav a {
   padding: 2rem;
   font-family: 'PT Sans';
 }
+@media (max-width: 550px) {
+  .skills-and-awards {
+    width: 100vw;
+  }
+}
+@media (max-width: 800px) {
+  .skills-and-awards {
+    width: 100vw;
+  }
+}
 .skills-and-awards h2 {
   font-size: 3rem;
   font-style: bold;
   color: purple;
   font-family: 'PT Sans', sans-serif;
   margin-bottom: 2rem;
-  text-align: center;
-  color: black;
 }
 .skills-and-awards h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-decoration: underline;
   margin-bottom: 1rem;
 }
@@ -254,9 +314,16 @@ header nav a {
   margin: 2rem;
 }
 .skills-and-awards ul li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
-.skills-and-awards h4 {
-  font-size: 1.7rem;
-  font-weight: bold;
+.skills-and-awards th {
+  padding: 0;
+}
+.skills-and-awards td {
+  background-color: lavender;
+  max-width: 10rem;
+  font-size: 1.2rem;
+}
+.skills-and-awards table {
+  max-width: 100%;
 }
